@@ -1,5 +1,7 @@
+VERSION=`rbenv version-name`
+
 shopt -s nullglob
-gemset_bin=(${RBENV_ROOT}/versions/*/gemsets/*/bin/*)
+gemset_bin=(/home/aleak/rbenv-gems/${VERSION}/bin/*)
 shopt -s nullglob
 
 cd "$SHIM_PATH"
