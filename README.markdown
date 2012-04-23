@@ -1,12 +1,12 @@
 # rbenv-usergems
 
-rbenv-usergems is an extension for the [rbenv][rbenv] ruby version manager that
-separates gem storage from your rbenv installation.  With rbenv-usergems, gems
-and shims are stored in the ~/.rbenv-usergems directory.
+rbenv-usergems is a [rbenv][rbenv] plugin that separates gem storage from 
+your rbenv installation.  With rbenv-usergems, gems and shims are stored 
+in the ~/.rbenv-usergems directory.
 
-This setup helps when you want to use a system-wide rbenv installation at 
-/opt/rbenv. (or /usr/bin/rbenv)  This way /opt/rbenv can be owned by root, 
-and user-installed shims and gems are stored in ~/.rbenv-usergems.
+This is helpful when using a system-wide rbenv installation at /opt/rbenv. 
+(or /usr/bin/rbenv)  This way /opt/rbenv can be owned by root, and 
+user-installed shims and gems are stored in ~/.rbenv-usergems.
 
 To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki).
 
