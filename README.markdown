@@ -2,11 +2,11 @@
 
 rbenv-usergems is a [rbenv][rbenv] plugin that separates gem storage from 
 your rbenv installation.  With rbenv-usergems, gems and shims are stored 
-in the ~/.rbenv-usergems directory, separate from your main rbenv directory.
+in the `~/.rbenv-usergems` directory, separate from your main rbenv directory.
 
-This is helpful when using a system-wide rbenv installation at /opt/rbenv. 
-(or /usr/bin/rbenv)  This way /opt/rbenv can be owned by root, and 
-user-installed shims and gems are stored in ~/.rbenv-usergems.
+This is helpful when using a system-wide rbenv installation at `/opt/rbenv`. 
+(or `/usr/bin/rbenv`)  This way `/opt/rbenv` can be owned by root, and 
+user-installed shims and gems are stored in `~/.rbenv-usergems`.
 
 To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki).
 
@@ -18,7 +18,7 @@ To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki)
         $ cd $RBENV_ROOT/plugins
         $ git clone git://github.com/andyl/rbenv-usergems.git
 
-2. Add the RBENV_ROOT to your init file
+2. Add RBENV_ROOT to your init file
 
         $ echo 'export RBENV_ROOT="/opt/rbenv"' >> ~/.bashrc
 
@@ -28,15 +28,15 @@ To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki)
 
 4. And you're done.
 
-Note: with rbenv-usergems, you do NOT have to setup a ~/.rbenv as you would in a normal 
+Note: with rbenv-usergems, you do NOT have to setup a `~/.rbenv` as you would in a normal 
 rbenv installation.
 
 ## Usage
 
-Use rbenv commands and install gems as you normally would.  Instead of using 'rbenv rehash',
-use 'rbenv usergems-rehash'.
+Use rbenv commands and install gems as you normally would.  Instead of using `rbenv rehash`,
+use `rbenv usergems-rehash`.
 
-A gem directory is created for each of your rubies under ~/.rbenv-usergems.
+A gem directory is created for each of your rubies under `~/.rbenv-usergems`.
 
     ~/.rbenv-usergems
       shims
