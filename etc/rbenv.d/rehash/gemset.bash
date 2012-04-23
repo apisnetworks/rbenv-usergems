@@ -1,9 +1,11 @@
 VERSION=`rbenv version-name`
 
-SHIM_PATH=$HOME/.rbenv_gems/shims
+SHIM_PATH=$HOME/.rbenv-usergems/shims
+
+mkdir -p $SHIM_PATH
 
 shopt -s nullglob
-gemset_bin=($HOME/.rbenv_gems/${VERSION}/bin/*)
+gemset_bin=($HOME/.rbenv-usergems/${VERSION}/bin/*)
 shopt -s nullglob
 
 cd "$SHIM_PATH"

@@ -48,7 +48,7 @@ if [ -z "$print" ]; then
   exit 1
 fi
 
-RBENV_GEM_ROOT="$HOME/.rbenv_gems"
+RBENV_GEM_ROOT="$HOME/.rbenv-usergems"
 
 mkdir -p "${RBENV_GEM_ROOT}/shims"
 

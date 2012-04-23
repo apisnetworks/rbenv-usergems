@@ -2,11 +2,11 @@
 
 rbenv-usergems is an extension for the [rbenv][rbenv] ruby version manager that
 separates gem storage from your rbenv installation.  With rbenv-usergems, gems
-and shims are stored in the ~/.rbenv-gems directory.
+and shims are stored in the ~/.rbenv-usergems directory.
 
-This separation helps when you want to setup a system-wide rbenv installation
-at /opt/rbenv.  (or /usr/bin/rbenv)  In this situation, /opt/rbenv can be owned 
-by root, and user-installed shims gems are stored in ~/.rbenv-gems.
+This setup helps when you want to use a system-wide rbenv installation at 
+/opt/rbenv. (or /usr/bin/rbenv)  This way /opt/rbenv can be owned by root, 
+and user-installed shims and gems are stored in ~/.rbenv-usergems.
 
 To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki).
 
@@ -18,24 +18,25 @@ To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki)
         $ cd $RBENV_ROOT/plugins
         $ git clone git://github.com/andyl/rbenv-usergems.git
 
-2. Add the RBENV_ROOT to your shell init script
+2. Add the RBENV_ROOT to your init file
 
-        $ echo 'export RBENV_ROOT="/opt/rbenv"' >> ~/.bash_profile
+        $ echo 'export RBENV_ROOT="/opt/rbenv"' >> ~/.bashrc
 
 3. Add a usergem-specific rbenv init to your shell to enable user shims and autocompletion:
 
-        $ echo 'eval "$(rbenv usergems-init -)"' >> ~/.bash_profile
+        $ echo 'eval "$(rbenv usergems-init -)"' >> ~/.bashrc
 
 4. And you're done.
 
-Note: with rbenv-usergems, you do NOT have to setup a ~/.rbenv as you would in a normal rbenv installation.
+Note: with rbenv-usergems, you do NOT have to setup a ~/.rbenv as you would in a normal 
+rbenv installation.
 
 ## Usage
 
-Just use rbenv commands and install gems as you normally would.  A gem dqirectory
+Just use rbenv commands and install gems as you normally would.  A gem directory
 is created for each of your rubies.
 
-    ~/.rbenv-gems
+    ~/.rbenv-usergems
       shims
         all of your shims...
       1.8.7-p453
@@ -47,7 +48,6 @@ is created for each of your rubies.
 
 ## License
 
-This code is placed in the public domain by the author, Andy Leak. Use it as
-you wish. Please prefer good over evil.
+This code is placed in the public domain.  Use it as you wish. 
 
 [rbenv]: http://github.com/sstephenson/rbenv
