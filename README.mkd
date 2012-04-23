@@ -12,22 +12,28 @@ To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki)
 
 ## Installation
 
-1. Clone rbenv-usergems to the `$RBENV_HOME/plugins` directory:
+1. Clone rbenv-usergems to the `$RBENV_ROOT/plugins` directory:
 
-        $ mkdir -p $RBENV_HOME/plugins
-        $ cd $RBENV_HOME/plugins
+        $ mkdir -p $RBENV_ROOT/plugins
+        $ cd $RBENV_ROOT/plugins
         $ git clone git://github.com/andyl/rbenv-usergems.git
 
-2. Add a usergem-specific rbenv init to your shell to enable user shims and autocompletion:
+2. Add the RBENV_ROOT to your shell init script
+
+        $ echo 'export RBENV_ROOT="/opt/rbenv"' >> ~/.bash_profile
+
+3. Add a usergem-specific rbenv init to your shell to enable user shims and autocompletion:
 
         $ echo 'eval "$(rbenv usergems-init -)"' >> ~/.bash_profile
 
-3. And you're done.
+4. And you're done.
+
+Note: with rbenv-usergems, you do NOT have to setup a ~/.rbenv as you would in a normal rbenv installation.
 
 ## Usage
 
-Just use rbenv commands and install gems as you normally would.  A separate directory
-is used to manage the gems associated with each of your rubies.
+Just use rbenv commands and install gems as you normally would.  A gem dqirectory
+is created for each of your rubies.
 
     ~/.rbenv-gems
       shims
