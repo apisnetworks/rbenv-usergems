@@ -33,8 +33,10 @@ rbenv installation.
 
 ## Usage
 
-Just use rbenv commands and install gems as you normally would.  A gem directory
-is created for each of your rubies.
+Use rbenv commands and install gems as you normally would.  Instead of using 'rbenv rehash',
+use 'rbenv usergems-rehash'.
+
+A gem directory is created for each of your rubies under ~/.rbenv-usergems.
 
     ~/.rbenv-usergems
       shims
