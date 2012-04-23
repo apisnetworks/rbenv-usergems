@@ -2,7 +2,7 @@
 set -e
 [ -n "$RBENV_DEBUG" ] && set -x
 
-RBENV_GEM_PATH="$HOME/.rbenv-usergens"
+RBENV_GEM_PATH="$HOME/.rbenv-usergems"
 SHIM_PATH="${RBENV_GEM_PATH}/shims"
 PROTOTYPE_SHIM_PATH="${SHIM_PATH}/.rbenv-shim"
 

@@ -61,7 +61,7 @@ bash | zsh )
 esac
 
 if [ -z "$no_rehash" ]; then
-  echo 'rbenv rehash 2>/dev/null'
+  echo 'rbenv usergems-rehash 2>/dev/null'
 fi
 
 commands=(`rbenv commands --sh`)
