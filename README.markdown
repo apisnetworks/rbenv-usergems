@@ -2,7 +2,7 @@
 
 rbenv-usergems is a [rbenv][rbenv] plugin that separates gem storage from 
 your rbenv installation.  With rbenv-usergems, gems and shims are stored 
-in the ~/.rbenv-usergems directory.
+in the ~/.rbenv-usergems directory, separate from your main rbenv directory.
 
 This is helpful when using a system-wide rbenv installation at /opt/rbenv. 
 (or /usr/bin/rbenv)  This way /opt/rbenv can be owned by root, and 
