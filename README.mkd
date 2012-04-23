@@ -2,13 +2,13 @@
 
 rbenv-usergems is an extension for the [rbenv][rbenv] ruby version manager that
 separates gem storage from your rbenv installation.  With rbenv-usergems, gems
-are stored in the ~/.rbenv-gems directory.
+and shims are stored in the ~/.rbenv-gems directory.
 
 This separation helps when you want to setup a system-wide rbenv installation
-at /opt/rbenv.  (or /usr/bin/rbenv)  In this situation, files under /opt/rbenv
-can be owned by root, and user-installed gems are stored in ~/.rbenv-gems.
+at /opt/rbenv.  (or /usr/bin/rbenv)  In this situation, /opt/rbenv can be owned 
+by root, and user-installed shims gems are stored in ~/.rbenv-gems.
 
-To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki/About).
+To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki).
 
 ## Installation
 
@@ -18,7 +18,11 @@ To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki/
         $ cd $RBENV_HOME/plugins
         $ git clone git://github.com/andyl/rbenv-usergems.git
 
-2. And you're done.
+2. Add a usergem-specific rbenv init to your shell to enable user shims and autocompletion:
+
+        $ echo 'eval "$(rbenv usergems-init -)"' >> ~/.bash_profile
+
+3. And you're done.
 
 ## Usage
 
@@ -26,6 +30,8 @@ Just use rbenv commands and install gems as you normally would.  A separate dire
 is used to manage the gems associated with each of your rubies.
 
     ~/.rbenv-gems
+      shims
+        all of your shims...
       1.8.7-p453
         all of the gems for this ruby...
       1.9.3-p125
