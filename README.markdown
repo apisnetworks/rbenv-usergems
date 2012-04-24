@@ -5,7 +5,7 @@ your rbenv installation.  With rbenv-usergems, gems and shims are stored
 in the `~/.rbenv-usergems` directory, separate from your main rbenv directory.
 
 This is helpful when using a system-wide rbenv installation at `/opt/rbenv`. 
-(or `/usr/bin/rbenv`)  This way `/opt/rbenv` can be owned by root, and 
+(or `/usr/local/rbenv`)  This way `/opt/rbenv` can be owned by root, and 
 user-installed shims and gems are stored in `~/.rbenv-usergems`.
 
 To learn more, see the [wiki page](https://github.com/andyl/rbenv-usergems/wiki).
