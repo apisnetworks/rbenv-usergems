@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+USAGE="Usage: gem-install <user> <gem>"
+USER=$1
+GEM=$2
+
+[ ! -f "/opt/rbenv/version" ] && echo "Error: no /opt/rbenv/version" && exit 1
+[ -z $USER ] && echo $USAGE && exit 1
+[ -z $GEM ]  && echo $USAGE && exit 1
+
+VERSION=`head -1 /opt/rbenv/version | tr -d '\n'`
+USERGEMS="/home/$USER/.rbenv-usergems"
+SHIM_PATH="$USERGEMS/shims"
+export GEM_HOME="$USERGEMS/$VERSION"
+
+# install gem
+/opt/rbenv/versions/$VERSION/bin/gem install $GEM
+
+mkdir -p $SHIM_PATH
+cd $SHIM_PATH
+rm -f *
+
+lsta=$HOME/.rbenv-usergems/${VERSION}/bin/*
+lstb=/opt/rbenv/versions/$VERSION/bin/*
+
+# create shims
+for file in lsta lstb ; do
+  shimname=`basename $file`
+  cp /opt/rbenv/plugin/rbenv-usergems/shim.txt $shimname
+  chmod 777 $shimname
+done
