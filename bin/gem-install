@@ -29,3 +29,5 @@ for file in $lsta $lstb ; do
   cp /opt/rbenv/plugins/rbenv-usergems/shim.txt $shimname
   chmod 777 $shimname
 done
+
+exit 0
