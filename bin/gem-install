@@ -24,8 +24,8 @@ lsta=$HOME/.rbenv-usergems/${VERSION}/bin/*
 lstb=/opt/rbenv/versions/$VERSION/bin/*
 
 # create shims
-for file in lsta lstb ; do
+for file in $lsta $lstb ; do
   shimname=`basename $file`
-  cp /opt/rbenv/plugin/rbenv-usergems/shim.txt $shimname
+  cp /opt/rbenv/plugins/rbenv-usergems/shim.txt $shimname
   chmod 777 $shimname
 done
